@@ -1,0 +1,2 @@
+# .github
+Personal GitHub configuration
