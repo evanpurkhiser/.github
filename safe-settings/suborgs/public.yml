@@ -1,0 +1,94 @@
+# yaml-language-server: $schema=https://raw.githubusercontent.com/github-community-projects/safe-settings/3.0.0/schema/dereferenced/suborgs.json
+---
+
+suborgrepos:
+  - .github
+  - agent-auth
+  - agent-witness
+  - alacritty
+  - ansible-personal
+  - atuin
+  - atuin-abacus
+  - atuin-visualization
+  - awesome-lunchmoney
+  - calendar-sync
+  - claude-plugins-official
+  - cleanUI
+  - croniter
+  - cronsim
+  - cueback
+  - dots
+  - dots-personal
+  - dots-template
+  - DW-SNS-01
+  - email-to-lunchmoney
+  - evanpurkhiser
+  - evanpurkhiser.com
+  - fastmail-personal
+  - git-conflict.nvim
+  - gmailctl-personal
+  - gruvbox-flat.nvim
+  - hddfancontrol
+  - homebrew-personal
+  - HOPPVALS-MRF-01
+  - image-paste.nvim
+  - iptorrents-cli
+  - keyfinder-cli
+  - keyfinder-py
+  - keyfinder-rs
+  - libkeyfinder-sys
+  - link-spec
+  - linux-vt-setcolors
+  - meal-log
+  - mkinitcpio-colors
+  - morning-routine
+  - nvim-file-watch
+  - oxc-config
+  - PKGBUILDs
+  - places
+  - plugins
+  - prek-personal
+  - prolink-connect
+  - prolink-go
+  - prolink-nowplaying-txt
+  - prolink-tools
+  - purkhiser.com
+  - push-to-transmission
+  - recovery
+  - rEFInd-minimal
+  - rekordbox-parser
+  - resume
+  - resyctl
+  - rx3-toolkit
+  - systemd-user-pam-ssh
+  - telegram-rs
+  - things3-cloud
+  - tmux-ai-titles
+  - tooling-personal
+  - transmission-helper
+  - tune-manager-rs
+  - turf
+  - userscripts-personal
+  - venmo-api-unofficial
+  - venmo-auto-cashout
+  - venmo-lunchmoney-ai
+  - waitress
+  - workflows
+  - zfs
+
+repository:
+  allow_auto_merge: true
+
+rulesets:
+  - name: Require linear history
+    target: branch
+    enforcement: active
+    conditions:
+      ref_name:
+        include:
+          - "~DEFAULT_BRANCH"
+        exclude: []
+    rules:
+      - type: deletion
+      - type: required_linear_history
+      - type: required_signatures
